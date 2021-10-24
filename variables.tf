@@ -5,3 +5,5 @@ variable "project_name" {
 variable "region" {
   default = "ap-northeast-1"
 }
+
+variable "my_domain" {}
