@@ -16,6 +16,7 @@ provider "aws" {
   default_tags {
     tags = {
       project = var.project_name
+      Name    = var.project_name
     }
   }
 }
