@@ -1,13 +1,22 @@
 variable "project_name" {
-  default = "settings"
+  description = "Project Name."
+  default     = "settings"
+  type        = string
 }
 
 variable "region" {
-  default = "ap-northeast-1"
+  description = "Region in which to build the resource."
+  default     = "ap-northeast-1"
+  type        = string
 }
 
-variable "my_domain" {}
+variable "my_domain" {
+  description = "My Domain."
+  type        = string
+}
 
 variable "vpc_cidr" {
-  default = "10.0.0.0/16"
+  description = "The IP address range of the VPC in CIDR notation."
+  default     = "10.0.0.0/16"
+  type        = string
 }
