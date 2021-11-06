@@ -14,3 +14,8 @@ variable "my_domain" {
   description = "My Domain."
   type        = string
 }
+
+variable "gcp_dns_ns_records" {
+  description = "GCP dns ns records."
+  type        = list(string)
+}
