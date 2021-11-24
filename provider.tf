@@ -11,7 +11,20 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region = "ap-northeast-1"
+  alias  = "ap-northeast-1"
+
+  default_tags {
+    tags = {
+      project = var.project_name
+      Name    = var.project_name
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+  alias  = "us-east-1"
 
   default_tags {
     tags = {
