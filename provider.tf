@@ -7,12 +7,14 @@ terraform {
   }
 
   backend "s3" {
+    bucket = "gompei-terraform-bucket"
+    key    = "settings/terraform.tfstate"
+    region = "ap-northeast-1"
   }
 }
 
 provider "aws" {
   region = "ap-northeast-1"
-  alias  = "ap-northeast-1"
 
   default_tags {
     tags = {

@@ -15,13 +15,11 @@ resource "aws_s3_bucket_public_access_block" "lambda-us-east-1" {
 }
 
 resource "aws_s3_bucket" "lambda-ap-northeast-1" {
-  provider = aws.ap-northeast-1
-  bucket   = "gompei-lambda-management-bucket-ap-northeast-1"
-  acl      = "private"
+  bucket = "gompei-lambda-management-bucket-ap-northeast-1"
+  acl    = "private"
 }
 
 resource "aws_s3_bucket_public_access_block" "lambda-ap-northeast-1" {
-  provider                = aws.ap-northeast-1
   bucket                  = aws_s3_bucket.lambda-ap-northeast-1.id
   block_public_acls       = true
   block_public_policy     = true
