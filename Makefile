@@ -14,4 +14,4 @@ plan: ## テラフォームによる実行計画を参照します
 
 .PHONY: apply
 apply: ## tf ファイルに記載された情報を元にリソースを作成します
-	terraform apply -var-file .tfvars -auto-approveraform
+	terraform apply -var-file .tfvars -auto-approve
